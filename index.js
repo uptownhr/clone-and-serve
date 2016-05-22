@@ -10,7 +10,7 @@ app.use(function(req,res,next){
   }
   next();
 });
-app.use(express.static('www.demandmedia.com'));
+app.use(express.static(process.env.domain));
 
 app.listen(9999, function(){
     open('http://localhost:9999')
